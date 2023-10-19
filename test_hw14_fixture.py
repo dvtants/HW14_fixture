@@ -19,16 +19,16 @@ class TestSite():
         print("\n Quit browser for test suite..")
         self.browser.quit()
 
-    def test_is_button_search(self):
+    def test_is_button_search(self, test_1):
         self.browser.get(link)
         self.browser.find_element(By.XPATH,
                                   "//button[@class='button button_color_green button_size_medium search-form__submit']")
 
-    def test_is_basket_link_on_the_main_page(self):
+    def test_is_basket_link_on_the_main_page(self, test_1):
         self.browser.get(link)
         self.browser.find_element(By.XPATH, "//rz-cart[@class='header-actions__component']")
 
-    def test_select_checkboxes(self):
+    def test_select_checkboxes(self, test_1):
         self.browser.get(link1)
         time.sleep(3)
         self.browser.find_element(By.XPATH, "//a[@href='category/Chehly']").click()
